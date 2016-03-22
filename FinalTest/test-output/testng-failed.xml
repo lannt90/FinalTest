@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="ProjectGroup">
+    <classes>
+      <class name="com.vsii.tsc.OpenERP.testcase.ProjectGroup"/>
+    </classes>
+  </test> <!-- ProjectGroup -->
+  <test name="ProjectGroup(failed)">
+    <classes>
+      <class name="com.vsii.tsc.OpenERP.testcase.ProjectGroup">
+        <methods>
+          <include name="PG"/>
+          <include name="afterMethod"/>
+          <include name="setupClass"/>
+        </methods>
+      </class> <!-- com.vsii.tsc.OpenERP.testcase.ProjectGroup -->
+    </classes>
+  </test> <!-- ProjectGroup(failed) -->
+</suite> <!-- Failed suite [Suite] -->
