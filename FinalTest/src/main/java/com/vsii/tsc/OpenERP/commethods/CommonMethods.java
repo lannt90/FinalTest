@@ -14,7 +14,7 @@ public class CommonMethods {
 		LoginPageMethod objLogin;
 		objLogin = new LoginPageMethod(TestBase.driver);
 		if(TestBase.driver.findElements(By.name("login")).size()!=0){
-			objLogin.login("phuongnt3", "12345678");
+			objLogin.loginToManagerPage("phuongnt3", "12345678");
 		}
 	}
 	

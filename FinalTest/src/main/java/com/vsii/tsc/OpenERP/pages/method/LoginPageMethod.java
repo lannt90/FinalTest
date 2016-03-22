@@ -1,55 +1,64 @@
 package com.vsii.tsc.OpenERP.pages.method;
 
+//import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-import com.vsii.tsc.OpenERP.utility.TestBase;
-//import com.relevantcodes.extentreports.ExtentReports;
+
+import com.relevantcodes.extentreports.ExtentReports;
 import com.vsii.tsc.OpenERP.pages.LoginPage;
+//import com.vsii.tsc.guru.pages.NewPageLogin;
 
 public class LoginPageMethod {
-  
-	//ExtentReports extent;
-	// Create new Web Driver variable
+//	Logger log = Logger.getLogger("trunghung");
 	WebDriver driver;
-	// Create new WebElementLogin object
-	public LoginPage objLoginPage = new LoginPage();
-
- 	// Initialize all web element
- 	public LoginPageMethod(WebDriver driver) {
- 	this.driver = driver;
-	PageFactory.initElements(driver, objLoginPage);
-}
- 	//Enter user name in UserID text box
-	public void setUserID(String txtUsername) {		
-		objLoginPage.getTxtUsername().sendKeys(txtUsername);
-	}
-
-	// Enter password in password text box
-	public void setPassword(String txtPassword) {	
-		objLoginPage.getTxtPassword().sendKeys(txtPassword);
-	}
-
-	// Click Login button
-	public void clickLogin() {
-		objLoginPage.getBtnLogin().click();
+	LoginPage objLogin = new LoginPage();
+	
+	public LoginPageMethod(WebDriver driver) {
+	this.driver = driver;
+	PageFactory.initElements(driver, objLogin);
+//	log.debug("Initiate web driver");
 	}
 	
-	// Get User ID in Login page
-	public String getUserID() {
-		return objLoginPage.getTxtUsername().getText();
-		}
+	// Enter username in UserID textbox
+	public void enterUserID(String txtUsername) {
+		objLogin.getUserNametxt().sendKeys(txtUsername);
+//		log.debug("Set username");
+	}
+	
+	// Enter password in password textbox
+	public void enterPassword(String txtPass) {
+		objLogin.getPasswordtxt().sendKeys(txtPass);
+//		log.debug("Set password");
+	}
+	
+	// Click login button
+	public void clickLogin() {
+		objLogin.getLoginbutt().click();
+//		log.debug("Click login button");
+	}
+	
+	// Get the title of Login page
+	public String getLoginTitle() {
+//		log.debug("Get web title text");
+		return objLogin.getWebTitleText().getText();
+	}
+	
+	// Log in manager page
+	public void loginToManagerPage(String username, String password) {
+		objLogin.getUserNametxt().sendKeys(username);
+		objLogin.getPasswordtxt().sendKeys(password);
+		objLogin.getLoginbutt().click();
+//		log.debug("Login to Manager page");
+	}
 
-		// Get Password in Login page
-	public String getPassword() {
-		return objLoginPage.getTxtPassword().getText();
-		
-		}
- public void login(String username, String password){
-	 objLoginPage.getTxtUsername().clear();
-	 objLoginPage.getTxtUsername().sendKeys(username);
-	 objLoginPage.getTxtPassword().clear();
-	 objLoginPage.getTxtPassword().sendKeys(password);
-	 objLoginPage.getBtnLogin().click(); 
- } 
+	// Get Manager ID in Manager page
+	public String getManagerIDInManagerPage() {
+//		log.debug("Get Manager ID in manager page");
+		return objLogin.getManagerID().getText();
+	}
+	
 }
+
+

@@ -1,46 +1,132 @@
 package com.vsii.tsc.OpenERP.pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
+
 public class LoginPage {
-  
-	@FindBy (name = "login")
-	WebElement txtUsername;
-	
-	@FindBy (name = "password")
-	WebElement txtPassword;		
-	
-	@FindBy (name = "submit")
-	WebElement btnLogin;
+	// Identify Web element username
+		@FindBy(xpath = ".//*[@name='login']")
+		private WebElement userNametxt;
 
-//	public LoginPage(WebDriver driver) {
-//		// TODO Auto-generated constructor stub
-//	}
+		// Identify Web element password
+		//@FindBy(name = "password")
+		@FindBy(xpath = ".//*[@name='password']")
+		private WebElement passwordtxt;
 
-	public WebElement getTxtUsername() {
-		return txtUsername;
-	}
+		// Identify Web element title text
+		@FindBy(className = "barone")
+		private WebElement webTitleText;
 
-	public void setTxtUsername(WebElement txtUsername) {
-		this.txtUsername = txtUsername;
-	}
+		// Identify Reset button
+		@FindBy(name = "btnReset")
+		private WebElement webReset;
 
-	public WebElement getTxtPassword() {
-		return txtPassword;
-	}
+		// Identify Submit button
+		//@FindBy(name = "btnLogin")
+		@FindBy(xpath = ".//*[@name='submit']")
+		private WebElement loginbutt;
 
-	public void setTxtPassword(WebElement txtPassword) {
-		this.txtPassword = txtPassword;
-	}
+		// Identify UserID Alert
+		@FindBy(id = "message23")
+		private WebElement webAlertUserID;
 
-	public WebElement getBtnLogin() {
-		return btnLogin;
-	}
+		// Identify Password Alert
+		@FindBy(id = "message18")
+		private WebElement webAlertPassword;
+		
+		// Identify Manger ID
+		@FindBy(xpath="html/body/table/tbody/tr/td/table/tbody/tr[3]/td")
+		private WebElement managerID;
 
-	public void setBtnLogin(WebElement btnLogin) {
-		this.btnLogin = btnLogin;
-	}
-	
+		public WebElement getManagerID() {
+			return managerID;
+		}
+
+		public void setManagerID(WebElement managerID) {
+			this.managerID = managerID;
+		}
+
+		public WebElement getWebUsername() {
+			return userNametxt;
+		}
+
+		public WebElement getLoginbutt() {
+			return loginbutt;
+		}
+
+		public void setLoginbutt(WebElement loginbutt) {
+			this.loginbutt = loginbutt;
+		}
+
+		public WebElement getUserNametxt() {
+			return userNametxt;
+		}
+
+		public WebElement getPasswordtxt() {
+			return passwordtxt;
+		}
+
+		public void setUserNametxt(WebElement userNametxt) {
+			this.userNametxt = userNametxt;
+		}
+
+		public WebElement getWebPassword() {
+			return passwordtxt;
+		}
+
+		public void setPasswordtxt(WebElement passwordtxt) {
+			this.passwordtxt = passwordtxt;
+		}
+
+		public WebElement getWebTitleText() {
+			return webTitleText;
+		}
+
+		public void setWebTitleText(WebElement webTitleText) {
+			this.webTitleText = webTitleText;
+		}
+
+		public WebElement getWebReset() {
+			return webReset;
+		}
+
+		public void setWebReset(WebElement webReset) {
+			this.webReset = webReset;
+		}
+
+		public WebElement getWebLogin() {
+			return loginbutt;
+		}
+
+		public void setWebLogin(WebElement loginbutt) {
+			this.loginbutt = loginbutt;
+		}
+
+		public WebElement getWebAlertUserID() {
+			return webAlertUserID;
+		}
+
+		public void setWebAlertUserID(WebElement webAlertUserID) {
+			this.webAlertUserID = webAlertUserID;
+		}
+
+		public WebElement getWebAlertPassword() {
+			return webAlertPassword;
+		}
+
+		public void setWebAlertPassword(WebElement webAlertPassword) {
+			this.webAlertPassword = webAlertPassword;
+		}
+		
+		@FindBy(linkText="Log out")
+		private WebElement webLogOut;
+
+		public WebElement getWebLogOut() {
+			return webLogOut;
+		}
+
+		public void setWebLogOut(WebElement webLogOut) {
+			this.webLogOut = webLogOut;
+		}
 }

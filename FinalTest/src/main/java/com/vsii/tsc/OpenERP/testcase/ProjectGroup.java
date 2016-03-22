@@ -25,12 +25,12 @@ public class ProjectGroup {
 	public void setupClass() throws NumberFormatException, IOException {
 		objLogin = new LoginPageMethod(TestBase.driver);
 		objProjectGroupMethod = new ProjectGroupPageMethod(TestBase.driver);
-//		CommonMethods.checkLogin();
+		CommonMethods.checkLogin();
 	}
 @Test(priority = 0, description = "Check Project Group")
-	public void PG() throws InterruptedException {
-		TestBase.methodName = "PG";		
-//		objLogin.login("phuongnt3", "12345678");
+	public void viewProjectList() throws InterruptedException {
+		TestBase.methodName = "viewProjectList";		
+		objLogin.loginToManagerPage("phuongnt3", "12345678");
 		objProjectGroupMethod.clickProjectMenu();
 		TestBase.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Assert.assertEquals(objProjectGroupMethod.getGrouplb(), "Group");
