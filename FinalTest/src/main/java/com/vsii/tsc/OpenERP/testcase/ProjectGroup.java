@@ -33,10 +33,8 @@ public class ProjectGroup {
  @Test(priority = 0, description = "Check Project Group")
 	public void PM03() throws InterruptedException {
 		TestBase.methodName = "PM03";	
-//		TestBase.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		objProjectGroupMethod.clickProjectMenu();
 		CommonMethods.waitUntil(objProjectGroupMethod.getLbGroup());
-//		TestBase.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(3000);
 		Assert.assertEquals(objProjectGroupMethod.getGrouplb(), "Group");
 		Assert.assertEquals(objProjectGroupMethod.getProjectName(), "Project Name");

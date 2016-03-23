@@ -36,10 +36,54 @@ public class CreateNewProject {
 		CommonMethods.waitUntil(objCreateProjectMethod.getmnProject());
 		objCreateProjectMethod.clickProjectmn();
 		CommonMethods.waitUntil(objCreateProjectMethod.getbtnCreate());
+		Thread.sleep(1000);
 		objCreateProjectMethod.clickCreatebtn();
 		objCreateProjectMethod.createNewProject(projectName, refContract, projectCode, privacy, projectManager,
 				appEffort, department, projectType, commDetails, customer);
 		Assert.assertTrue(objCreateProjectMethod.CreateSuccess().contains("Submit to Review"));
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+//	@Test(priority = 1, description = "Create New Project with invalid data", dataProvider = "dpInvalidCreate1", dataProviderClass = TestData.class)
+	public void PM07(String projectName, String refContract, String projectCode, String privacy, String projectManager,
+			String appEffort, String department, String projectType, String commDetails, String customer)
+					throws Exception {
+//		String popuptext = objCreateProjectMethod.getPopupText();
+		TestBase.methodName = "PM07";
+		CommonMethods.waitUntil(objCreateProjectMethod.getmnProject());
+		objCreateProjectMethod.clickProjectmn();
+		CommonMethods.waitUntil(objCreateProjectMethod.getbtnCreate());
+		objCreateProjectMethod.clickCreatebtn();
+		objCreateProjectMethod.createNewProject(projectName, refContract, projectCode, privacy, projectManager,
+				appEffort, department, projectType, commDetails, customer);
+		Assert.assertTrue(objCreateProjectMethod.getPopupText().contains("Access Denied"));
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+//	@Test(priority = 2, description = "Create New Project with leaving required fields blank", dataProvider = "dpInvalidCreate2", dataProviderClass = TestData.class)
+	public void PM08(String projectName, String refContract, String projectCode, String privacy, String projectManager,
+			String appEffort, String department, String projectType, String commDetails, String customer)
+					throws Exception {
+
+		TestBase.methodName = "PM08";
+		CommonMethods.waitUntil(objCreateProjectMethod.getmnProject());
+		objCreateProjectMethod.clickProjectmn();
+		CommonMethods.waitUntil(objCreateProjectMethod.getbtnCreate());
+		objCreateProjectMethod.clickCreatebtn();
+		objCreateProjectMethod.createNewProject(projectName, refContract, projectCode, privacy, projectManager,
+		appEffort, department, projectType, commDetails, customer);
+		Assert.assertTrue(objCreateProjectMethod.getPopupText().contains("Following fields are invalid"));
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
