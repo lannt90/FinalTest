@@ -10,6 +10,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.vsii.tsc.OpenERP.commethods.CommonMethods;
+import com.vsii.tsc.OpenERP.pages.ProjectCreateNew;
+import com.vsii.tsc.OpenERP.pages.ProjectGroupPage;
 import com.vsii.tsc.OpenERP.pages.method.LoginPageMethod;
 import com.vsii.tsc.OpenERP.pages.method.ProjectGroupPageMethod;
 import com.vsii.tsc.OpenERP.utility.TestBase;
@@ -20,6 +22,7 @@ import com.vsii.tsc.OpenERP.utility.CommonOperations;
 public class ProjectGroup {
  LoginPageMethod objLogin; 
  ProjectGroupPageMethod objProjectGroupMethod;
+ ProjectGroupPage objProjectGroup;
  
  @BeforeClass
 	public void setupClass() throws NumberFormatException, IOException {
@@ -27,19 +30,21 @@ public class ProjectGroup {
 		objProjectGroupMethod = new ProjectGroupPageMethod(TestBase.driver);
 		CommonMethods.checkLogin();
 	}
-@Test(priority = 0, description = "Check Project Group")
-	public void viewProjectList() throws InterruptedException {
-		TestBase.methodName = "viewProjectList";		
-		objLogin.loginToManagerPage("phuongnt3", "12345678");
+ @Test(priority = 0, description = "Check Project Group")
+	public void PM03() throws InterruptedException {
+		TestBase.methodName = "PM03";	
+//		TestBase.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		objProjectGroupMethod.clickProjectMenu();
-		TestBase.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		CommonMethods.waitUntil(objProjectGroupMethod.getLbGroup());
+//		TestBase.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(3000);
 		Assert.assertEquals(objProjectGroupMethod.getGrouplb(), "Group");
 		Assert.assertEquals(objProjectGroupMethod.getProjectName(), "Project Name");
 		Assert.assertEquals(objProjectGroupMethod.getProjectManager(), "Project Manager");
 		Assert.assertEquals(objProjectGroupMethod.getContact(), "Contact");
 		Assert.assertEquals(objProjectGroupMethod.getPlannedTime(), "Planned Time");
-		Assert.assertEquals(objProjectGroupMethod.getTotalTime(), "Total Time ");
-		Assert.assertEquals(objProjectGroupMethod.getSpendTime(), "Spend Time");
+		Assert.assertEquals(objProjectGroupMethod.getTotalTime(), "Total Time");
+		Assert.assertEquals(objProjectGroupMethod.getSpendTime(), "Time Spent");
 		Assert.assertEquals(objProjectGroupMethod.getProjectCode(), "Project Code");
 		Assert.assertEquals(objProjectGroupMethod.getProgress(), "Progress");
 		Assert.assertEquals(objProjectGroupMethod.getStatus(), "Status");		

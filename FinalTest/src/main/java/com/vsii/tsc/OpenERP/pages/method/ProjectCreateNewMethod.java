@@ -1,6 +1,7 @@
 package com.vsii.tsc.OpenERP.pages.method;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import com.vsii.tsc.OpenERP.pages.ProjectCreateNew;
@@ -16,73 +17,75 @@ public class ProjectCreateNewMethod {
   // get all value of all fields:
   
   public void clickCreatebtn (){
-	  
+	  objCreateProject.getBtnCreate();
 	  objCreateProject.getBtnCreate().click();  
   }
+  public void clickProjectmn (){
+	  objCreateProject.getMenuProject();
+	  objCreateProject.getMenuProject().click();  
+  }
   public String getProjectName(){
-	  
-	  objCreateProject.getTxtProjectName();
+//	  objCreateProject.getTxtProjectName();
 	  return objCreateProject.getTxtProjectName().getText();
 	  
   }
-  public String getRefContract(){
-	  
-	  objCreateProject.getTxtRefContract();
+  public String getRefContract(){ 
+//	  objCreateProject.getTxtRefContract();
 	  return objCreateProject.getTxtRefContract().getText();
 	  
   }
   public String getProjectCode(){
-	  
-	  objCreateProject.getTxtProjectCode();
+//	  objCreateProject.getTxtProjectCode();
 	  return objCreateProject.getTxtProjectCode().getText();
 	  
   }
   public String getPrivacy(){
-	  
-	  objCreateProject.getDropPrivacy();
+//	  objCreateProject.getDropPrivacy();
 	  return objCreateProject.getDropPrivacy().getText();
 	  
   }
   public String getProjectManager(){
-	  
-	  objCreateProject.getDropProjectManager();
+//	  objCreateProject.getDropProjectManager();
 	  return objCreateProject.getDropProjectManager().getText();	  
   }
-  public String getAppEffort(){
-	  
-	  objCreateProject.getTxtApprovedEffort();
+  public String getAppEffort(){ 
+//	  objCreateProject.getTxtApprovedEffort();
 	  return objCreateProject.getTxtApprovedEffort().getText();
 	  
   }
-  public String getDepartment(){
-	  
-	  objCreateProject.getDropDepartment();
+  public String getDepartment(){  
+//	  objCreateProject.getDropDepartment();
 	  return objCreateProject.getDropDepartment().getText();
 	  
   }
-  public String getProjectType(){
-	  
-	  objCreateProject.getDropProjectType();
+  public String getProjectType(){	  
+//	  objCreateProject.getDropProjectType();
 	  return objCreateProject.getDropProjectType().getText();
 	  
   }
-  public String getCommercialDetails(){
-	  
-	  objCreateProject.getDropCommercialDetails();
+  public String getCommercialDetails(){	  
+//	  objCreateProject.getDropCommercialDetails();
 	  return objCreateProject.getDropCommercialDetails().getText();
 	  
   }
-  public String getCustomer(){
-	  
-	  objCreateProject.getDropCustomer();
+  public String getCustomer(){	  
+//	  objCreateProject.getDropCustomer();
 	  return objCreateProject.getDropCustomer().getText();
-	  
+	  	  
   }
+  
+  public WebElement getmnProject() {
+		return objCreateProject.getMenuProject();
+	}
+  
+  public WebElement getbtnCreate() {
+		return objCreateProject.getBtnCreate();
+	}
   // Create New Project
   
   public void createNewProject (String projectName, String refContract, String projectCode, String privacy, String projectManager, 
 		  String appEffort, String department, String projectType, String commDetails, String customer ){
-	 objCreateProject.getMenunProject();
+	 objCreateProject.getMenuProject();
 	 objCreateProject.getBtnCreate();
 	 objCreateProject.getTxtProjectName();
 	 objCreateProject.getTxtRefContract();
@@ -98,12 +101,12 @@ public class ProjectCreateNewMethod {
 	  
   }	  
   public String CreateSuccess(){
-	  return  objCreateProject.getTbnSubmit().getText(); 
+	  return  objCreateProject.getBtnSubmit().getText(); 
 	    }
 
-  public void gotoCreateNewPage (){
-	  objCreateProject.getMenunProject();
-	  objCreateProject.getBtnCreate().click();  
-	  
-  }
+//  public void gotoCreateNewPage (){
+//	  objCreateProject.getMenuProject();
+//	  objCreateProject.getBtnCreate().click();  
+//	  
+//  }
 }

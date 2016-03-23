@@ -1,14 +1,16 @@
 package com.vsii.tsc.OpenERP.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
 public class ProjectCreateNew {
+	
 	@FindBy(xpath ="html/body/div[1]/table/tbody/tr[2]/td/ul/li[2]/a")
 	WebElement menunProject;
-	
-	public WebElement getMenunProject() {
+
+	public WebElement getMenuProject() {
 		return menunProject;
 	}
 
@@ -24,7 +26,7 @@ public class ProjectCreateNew {
 		this.btnCreate = btnCreate;
 	}
 
-	@FindBy(xpath ="html/body/div[1]/table/tbody/tr[2]/td/ul/li[2]/a")
+	@FindBy(xpath ="html/body/div[1]/table/tbody/tr[3]/td[2]/div/div/table/tbody/tr[2]/td[1]/div/div/button[1]")
 	WebElement btnCreate;	
   
 	@FindBy (xpath =".//*[@id='oe-field-input-98']")
@@ -64,14 +66,14 @@ public class ProjectCreateNew {
 	WebElement btnSave;
 	//Phan tu tren trang khi tao moi page thanh cong
 	@FindBy (xpath= ".//*[contains(text(),'Submit to Review')]")
-	WebElement tbnSubmit;
+	WebElement btnSubmit;
 
-	public WebElement getTbnSubmit() {
-		return tbnSubmit;
+	public WebElement getBtnSubmit() {
+		return btnSubmit;
 	}
 
-	public void setTbnSubmit(WebElement tbnSubmit) {
-		this.tbnSubmit = tbnSubmit;
+	public void setBtnSubmit(WebElement btnSubmit) {
+		this.btnSubmit = btnSubmit;
 	}
 
 	public WebElement getTxtProjectName() {

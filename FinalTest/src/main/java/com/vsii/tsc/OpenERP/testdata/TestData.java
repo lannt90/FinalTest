@@ -29,13 +29,13 @@ public class TestData {
 	
 	@DataProvider(name="dpNewProject")
 	public static Object[][]  getCustomerData() {
-		Object[][] data = ExcelHandle.getTable("./data/TestData.xlsx", "CreateNewProject", "CN01");
+		Object[][] data = ExcelHandle.getTable("./data/TestData.xlsx", "CreateNewProject", "PM06");
 		return data;
 	}
 
 	@DataProvider(name = "dpEditProject")
 	public static Object[][] editCustomerData() {
-		Object[][] data = ExcelHandle.getTable("./data/TestData.xlsx", "EditProject", "EP01");
+		Object[][] data = ExcelHandle.getTable("./data/TestData.xlsx", "EditProject", "PM09");
 		return data;
 	}
 	

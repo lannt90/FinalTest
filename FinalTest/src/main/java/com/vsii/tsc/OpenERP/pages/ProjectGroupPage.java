@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class ProjectGroupPage {
 	
-  @FindBy (xpath ="html/body/div[1]/table/tbody/tr[2]/td/ul/li[2]/a")
+  @FindBy (xpath ="html/body/div[1]/table/tbody/tr[2]/td/ul/li[2]/a/span")
   private WebElement menuProject;
 	
   public WebElement getMenuProject() {
@@ -17,37 +17,37 @@ public void setMenuProject(WebElement menuProject) {
 	this.menuProject = menuProject;
 }
 
-@FindBy (xpath = ".//th[contains(text(),'Group')]")
+  @FindBy (xpath = ".//*[@class='oe_list_header_columns']/th[1]")
   private WebElement lbGroup;
   
-  @FindBy (xpath = ".//th[contains(text(),'Project Name')]")
+  @FindBy (xpath = ".//*[@class='oe_list_header_columns']/th[4]/div")
   private WebElement lbProjectName;
   
-  @FindBy (xpath = ".//th[contains(text(),'Project Manager')]")
+  @FindBy (xpath = ".//*[@class='oe_list_header_columns']/th[5]/div")
   private WebElement lbProjectManager;
   
-  @FindBy (xpath = ".//th[contains(text(),'Contact')]")
+  @FindBy (xpath = ".//*[@class='oe_list_header_columns']/th[6]/div")
   private WebElement Contact;
   
-  @FindBy (xpath = ".//th[contains(text(),'Planned Time')]")
+  @FindBy (xpath = ".//*[@class='oe_list_header_columns']/th[7]/div")
   private WebElement lbPlannedTime;
   
-  @FindBy (xpath = ".//th[contains(text(),'Total Time')]")
+  @FindBy (xpath = ".//*[@class='oe_list_header_columns']/th[8]/div")
   private WebElement lbTotalTime;
   
-  @FindBy (xpath = ".//th[contains(text(),'Time Spent')]")
+  @FindBy (xpath = ".//*[@class='oe_list_header_columns']/th[9]/div")
   private WebElement lbTimeSpent;
   
-  @FindBy (xpath = ".//th[contains(text(),'Project Code')]")
+  @FindBy (xpath = ".//*[@class='oe_list_header_columns']/th[10]/div")
   private WebElement lbProjectCode;
   
-  @FindBy (xpath = ".//th[contains(text(),'Progress')]")
+  @FindBy (xpath = ".//*[@class='oe_list_header_columns']/th[11]/div")
   private WebElement lbProgress;
   
-  @FindBy (xpath = ".//th[contains(text(),'Status')]")
+  @FindBy (xpath = ".//*[@class='oe_list_header_columns']/th[12]/div")
   private WebElement lbStatus;
   
-  @FindBy (xpath = ".//th[contains(text(),'VSII(5)')]")
+  @FindBy (xpath = ".//*[contains(text(),'VSII (5)')]")
   private WebElement lbFirstGroup;
   
   @FindBy (xpath = ".//th[contains(text(),'VSII / TSC')]")

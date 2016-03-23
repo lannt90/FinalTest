@@ -36,28 +36,8 @@ public class Login {
 		// perform login
 		objLogin.loginToManagerPage(username, password);
 
-		// input invalid account, having popup. If not, login successfully
-//		if (CommonOperations.isAlertPresent(TestBase.driver)) {
-//			// Get popup's text
-////			String txtPopup = objLogin.getPopupText();
-//			Assert.assertTrue(txtPopup.contains(message));
-//		} else {
-//			String managerID;
-//			managerID = objLogin.getManagerIDInManagerPage();
-//			Assert.assertTrue(managerID.contains(message));
-//		}
 	}
 	
-	// @Test(priority = 1, description = "verify_Reset_Button", dataProvider = "dpReset", dataProviderClass = TestData.class)
-//	 public void LO03(String username, String password) throws Exception {
-//		//get method's name
-//		TestBase.methodName = "LO03";
-//		objLogin.setUserID(username);
-//		objLogin.setPassword(password);
-//		objLogin.clickReset();
-//		Assert.assertEquals(objLogin.getUserID(), "");
-//		Assert.assertEquals(objLogin.getPassword(), "");
-//	 }
 
 	@AfterMethod
 	public void afterMethod() throws Exception {
