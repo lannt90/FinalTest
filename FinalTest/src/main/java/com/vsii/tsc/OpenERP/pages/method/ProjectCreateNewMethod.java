@@ -1,5 +1,6 @@
 package com.vsii.tsc.OpenERP.pages.method;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -25,51 +26,51 @@ public class ProjectCreateNewMethod {
 	  objCreateProject.getMenuProject().click();  
   }
   public String getProjectName(){
-//	  objCreateProject.getTxtProjectName();
+	  objCreateProject.getTxtProjectName();
 	  return objCreateProject.getTxtProjectName().getText();
 	  
   }
   public String getRefContract(){ 
-//	  objCreateProject.getTxtRefContract();
+	  objCreateProject.getTxtRefContract();
 	  return objCreateProject.getTxtRefContract().getText();
 	  
   }
   public String getProjectCode(){
-//	  objCreateProject.getTxtProjectCode();
+	  objCreateProject.getTxtProjectCode();
 	  return objCreateProject.getTxtProjectCode().getText();
 	  
   }
   public String getPrivacy(){
-//	  objCreateProject.getDropPrivacy();
+	  objCreateProject.getDropPrivacy();
 	  return objCreateProject.getDropPrivacy().getText();
 	  
   }
   public String getProjectManager(){
-//	  objCreateProject.getDropProjectManager();
+	  objCreateProject.getDropProjectManager();
 	  return objCreateProject.getDropProjectManager().getText();	  
   }
   public String getAppEffort(){ 
-//	  objCreateProject.getTxtApprovedEffort();
+	  objCreateProject.getTxtApprovedEffort();
 	  return objCreateProject.getTxtApprovedEffort().getText();
 	  
   }
   public String getDepartment(){  
-//	  objCreateProject.getDropDepartment();
+	  objCreateProject.getDropDepartment();
 	  return objCreateProject.getDropDepartment().getText();
 	  
   }
   public String getProjectType(){	  
-//	  objCreateProject.getDropProjectType();
+	  objCreateProject.getDropProjectType();
 	  return objCreateProject.getDropProjectType().getText();
 	  
   }
   public String getCommercialDetails(){	  
-//	  objCreateProject.getDropCommercialDetails();
+	  objCreateProject.getDropCommercialDetails();
 	  return objCreateProject.getDropCommercialDetails().getText();
 	  
   }
   public String getCustomer(){	  
-//	  objCreateProject.getDropCustomer();
+	  objCreateProject.getDropCustomer();
 	  return objCreateProject.getDropCustomer().getText();
 	  	  
   }
@@ -80,6 +81,16 @@ public class ProjectCreateNewMethod {
   
   public WebElement getbtnCreate() {
 		return objCreateProject.getBtnCreate();
+	}
+  
+  public String getPopupText() {
+		Alert alert = driver.switchTo().alert();
+		return alert.getText();
+	}
+
+	public void closePopup() {
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
 	}
   // Create New Project
   

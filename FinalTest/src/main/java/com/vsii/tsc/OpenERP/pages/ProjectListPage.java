@@ -16,6 +16,28 @@ private WebElement lbProject1;
 @FindBy (xpath= ".//*[contains(text(),'Laplink 07')]")
 private WebElement lbProject2;
 
+@FindBy (xpath= ".//*[contains(text(),'VIB-IP3')]")
+private WebElement lbProject3;
+
+@FindBy (xpath= ".//*[contains(text(),'Vpbank testing')]")
+private WebElement lbProject4;
+
+public WebElement getLbProject3() {
+	return lbProject3;
+}
+
+public void setLbProject3(WebElement lbProject3) {
+	this.lbProject3 = lbProject3;
+}
+
+public WebElement getLbProject4() {
+	return lbProject4;
+}
+
+public void setLbProject4(WebElement lbProject4) {
+	this.lbProject4 = lbProject4;
+}
+
 @FindBy (xpath= ".//*[contains(text(),'LIENLT')]")
 private WebElement  lbProjectMan1;
 

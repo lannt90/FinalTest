@@ -14,7 +14,7 @@ import com.vsii.tsc.OpenERP.utility.TestBase;
 
 public class ProjectList {
 	LoginPageMethod objLogin;
-	ProjectListPageMethod objProjectList;
+	ProjectListPageMethod objProjectListMethod;
 	ProjectCreateNewMethod objCreateProjectMethod;
 	ProjectCreateNew objCreateProject;
 	ProjectGroupPageMethod objProjectGroupMethod;
@@ -22,7 +22,7 @@ public class ProjectList {
 	@BeforeClass
 	public void setupClass() throws Exception {
 		objLogin = new LoginPageMethod(TestBase.driver);
-		objProjectList = new ProjectListPageMethod(TestBase.driver);
+		objProjectListMethod = new ProjectListPageMethod(TestBase.driver);
 		CommonMethods.checkLogin();
 	}
 	
@@ -32,11 +32,11 @@ public class ProjectList {
 		objProjectGroupMethod.clickProjectMenu();
 		CommonMethods.waitUntil(objProjectGroupMethod.getLbGroup());
 		Thread.sleep(3000);	
-		objProjectList.clickDepartment();
-		Assert.assertEquals(objProjectList.getlbProject1(), "TSC_General _Non project works");
-		Assert.assertEquals(objProjectList.getlbProject2(), "Laplink 07");
-		Assert.assertEquals(objProjectList.getlbProject3(), "VIB-IP3");
-		Assert.assertEquals(objProjectList.getlbProject4(), "Vpbank testing");
+		objProjectListMethod.clickDepartment();
+		Assert.assertEquals(objProjectListMethod.getlbProject1(), "TSC_General _Non project works");
+		Assert.assertEquals(objProjectListMethod.getlbProject2(), "Laplink 07");
+		Assert.assertEquals(objProjectListMethod.getlbProject3(), "VIB-IP3");
+		Assert.assertEquals(objProjectListMethod.getlbProject4(), "Vpbank testing");
 		
 	}
 	

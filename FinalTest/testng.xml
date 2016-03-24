@@ -9,6 +9,7 @@
 			<class name="com.vsii.tsc.OpenERP.utility.TestBase" />
 <!-- 			<class name="com.vsii.tsc.OpenERP.testcase.ProjectGroup" /> -->
 			<class name="com.vsii.tsc.OpenERP.testcase.CreateNewProject" />
+<!-- 			<class name="com.vsii.tsc.OpenERP.testcase.ProjectList" /> -->
 		</classes>
 	</test>
 </suite> 

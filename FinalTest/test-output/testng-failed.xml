@@ -16,7 +16,7 @@
         <methods>
           <include name="setupClass"/>
           <include name="teardownClass"/>
-          <include name="PM06" invocation-numbers="0"/>
+          <include name="PM07" invocation-numbers="0"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.vsii.tsc.OpenERP.testcase.CreateNewProject -->
