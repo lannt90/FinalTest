@@ -2,26 +2,26 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="26211" started-at="2016-03-24T06:28:03Z" finished-at="2016-03-24T06:28:30Z">
+  <suite name="Suite" duration-ms="19622" started-at="2016-03-25T12:06:52Z" finished-at="2016-03-25T12:07:11Z">
     <groups>
     </groups>
-    <test name="Project Management" duration-ms="26211" started-at="2016-03-24T06:28:03Z" finished-at="2016-03-24T06:28:30Z">
+    <test name="Project Management" duration-ms="19622" started-at="2016-03-25T12:06:52Z" finished-at="2016-03-25T12:07:11Z">
       <class name="com.vsii.tsc.OpenERP.utility.TestBase">
-        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.vsii.tsc.OpenERP.utility.TestBase@e8b5fe]" name="setupSuite" is-config="true" duration-ms="66806" started-at="2016-03-24T13:26:57Z" finished-at="2016-03-24T13:28:03Z">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:com.vsii.tsc.OpenERP.utility.TestBase@e8b5fe]" name="setupSuite" is-config="true" duration-ms="9589" started-at="2016-03-25T19:06:42Z" finished-at="2016-03-25T19:06:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method status="PASS" signature="teardownSuite()[pri:0, instance:com.vsii.tsc.OpenERP.utility.TestBase@e8b5fe]" name="teardownSuite" is-config="true" duration-ms="4046" started-at="2016-03-24T13:28:30Z" finished-at="2016-03-24T13:28:34Z">
+        <test-method status="PASS" signature="teardownSuite()[pri:0, instance:com.vsii.tsc.OpenERP.utility.TestBase@e8b5fe]" name="teardownSuite" is-config="true" duration-ms="923" started-at="2016-03-25T19:07:11Z" finished-at="2016-03-25T19:07:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownSuite -->
       </class> <!-- com.vsii.tsc.OpenERP.utility.TestBase -->
       <class name="com.vsii.tsc.OpenERP.testcase.CreateNewProject">
-        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.vsii.tsc.OpenERP.testcase.CreateNewProject@4416b]" name="setupClass" is-config="true" duration-ms="5154" started-at="2016-03-24T13:28:04Z" finished-at="2016-03-24T13:28:09Z">
+        <test-method status="PASS" signature="setupClass()[pri:0, instance:com.vsii.tsc.OpenERP.testcase.CreateNewProject@4416b]" name="setupClass" is-config="true" duration-ms="1613" started-at="2016-03-25T19:06:52Z" finished-at="2016-03-25T19:06:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupClass -->
-        <test-method status="PASS" signature="PM06(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.vsii.tsc.OpenERP.testcase.CreateNewProject@4416b]" name="PM06" duration-ms="10636" started-at="2016-03-24T13:28:16Z" description="Create New Project with valid data" data-provider="dpNewProject" finished-at="2016-03-24T13:28:27Z">
+        <test-method status="PASS" signature="PM06(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.vsii.tsc.OpenERP.testcase.CreateNewProject@4416b]" name="PM06" duration-ms="14522" started-at="2016-03-25T19:06:54Z" description="Create New Project with valid data" data-provider="dpNewProject" finished-at="2016-03-25T19:07:09Z">
           <params>
             <param index="0">
               <value>
@@ -77,11 +77,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PM06 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.vsii.tsc.OpenERP.testcase.CreateNewProject@4416b]" name="afterMethod" is-config="true" duration-ms="3040" started-at="2016-03-24T13:28:27Z" finished-at="2016-03-24T13:28:30Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.vsii.tsc.OpenERP.testcase.CreateNewProject@4416b]" name="afterMethod" is-config="true" duration-ms="2514" started-at="2016-03-25T19:07:09Z" finished-at="2016-03-25T19:07:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="teardownClass()[pri:0, instance:com.vsii.tsc.OpenERP.testcase.CreateNewProject@4416b]" name="teardownClass" is-config="true" duration-ms="1" started-at="2016-03-24T13:28:30Z" finished-at="2016-03-24T13:28:30Z">
+        <test-method status="PASS" signature="teardownClass()[pri:0, instance:com.vsii.tsc.OpenERP.testcase.CreateNewProject@4416b]" name="teardownClass" is-config="true" duration-ms="0" started-at="2016-03-25T19:07:11Z" finished-at="2016-03-25T19:07:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownClass -->
